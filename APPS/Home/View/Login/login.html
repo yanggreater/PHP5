@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>您好，欢迎登陆</title>
+	<load href="__PUBLIC__/Css/basic.css"/>
+	<script type="text/javascript">
+		function jump(){
+			window.location="__APP__/Home/Register/reg";
+		}
+
+		function check(){
+			if(myform.username.value==""){
+				alert("请填写用户名");
+				myform.username.focus();
+				return false;
+			}
+			if(myform.password.value.length<5){
+				alert("密码不能少于5位");
+				myform.password.focus();
+				return false;
+			}
+		}
+	</script>
+</head>
+<body>
+	<form action="__URL__/dologin" method="post" name="myform" onsubmit="return check();">
+		用户名：<input type="text" name="username"/><br/><br/>
+		密　码：<input type="password" name="password"/><br/>
+		验证码：<input type="text" name="code"></input><img src="__APP__/Home/Public/code" onclick="this.src=this.src+'?'+Math.random()" />
+		<input type="submit" value="登录"/>  
+
+	</form>
+	<button onclick="jump()">注册</button>
+	
+</body>
+</html>

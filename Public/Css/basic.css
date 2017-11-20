@@ -1,0 +1,17 @@
+form{
+	width: 350px;
+	margin: 0 auto;
+}
+button{
+	position: relative;
+	left: 570px;
+	top: -22px;
+	
+}
+img{
+	position: relative;
+	left: 15px;
+	top: 10px;
+	width: 100px;
+	height: 40px;
+}
